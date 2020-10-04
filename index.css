@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt:ital,wght@1,300&family=Zilla+Slab:ital@1&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+h2{
+    color: #006a71;
+    font-size: 30px;
+}
+body {
+    font-family: 'Prompt', sans-serif;
+    font-family: 'Zilla Slab', serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #eeeeee;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    color: #070808;
+    font-size: 20px;
+}
+
+.movie-container{
+    margin: 20px 0;
+}
+
+.movie-container select{
+    background-color: #e0dede;
+    font-size: 16px;
+    padding:5px 10px;
+    border: 0;
+    border-radius: 7px;
+    width: 200px;
+    margin-left: 10px;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.container{
+    perspective: 1000px;
+    margin-bottom: 20px;
+}
+.seat{
+    background-color: #e6deb5;
+    height: 20px;
+    width: 20px;
+    margin: 0 2px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.seat.selected{
+    background-color: #96bb7c;
+}
+
+.seat.occupied{
+    background-color: #cf1b1b;
+}
+
+
+.seat:nth-of-type(2){
+    margin-right: 25px;
+}
+
+.seat:nth-last-of-type(2){
+    margin-left: 25px;
+}
+
+.seat:not(.occupied):hover{
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+.showcase .seat:not(.occupied):hover{
+    cursor: default;
+    transform: scale(1);
+}
+
+
+
+.row{
+    display: flex;
+}
+
+
+ul{
+    display:flex;
+    justify-content: space-between;
+    list-style-type: none;
+    background-color: #e6e6de8f;
+    padding: 5px;
+    border-radius: 10px;
+    color:black
+}
+
+.showcase li{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 12px ;
+}
+
+.showcase li small{
+    margin-left: 5px;
+}
+
+.screen{
+    height: 70px;
+    width: 100%;
+    background-color: rgb(32, 31, 31);
+    box-shadow: 0 0 2px rgb(46, 44, 44);
+    margin: 15px 0 10px;
+    transform: rotateX(-30deg);
+}
+
+p.text{
+    margin: 5px;
+}
+
+p.text span{
+    color: #006a71;
+    margin-right: 5px;
+    font-size: 16px;
+    font-family: 'Prompt', sans-serif;
+}
+
